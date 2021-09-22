@@ -154,9 +154,6 @@ pipeline:
                         action:
                             type: StageRollback
     variables:
-        - name: seusername
-          type: String
-          value: <+input>
         - name: ffsdkkeyprod
           type: String
           default: bankvalidation
