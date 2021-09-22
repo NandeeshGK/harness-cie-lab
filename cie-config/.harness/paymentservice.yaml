@@ -153,8 +153,4 @@ pipeline:
                             - AllErrors
                         action:
                             type: StageRollback
-    variables:
-        - name: ffsdkkeyprod
-          type: String
-          default: bankvalidation
-          value: <+input>
+    variables: []
