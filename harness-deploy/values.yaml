@@ -1,11 +1,10 @@
 name: payment-service
 replicas: 1
 
-image: <+artifact.image>
-# dockercfg: <+artifact.imagePullSecret>
+image: nginx
 
 createNamespace: true
-namespace: <+infra.namespace>
+namespace: default
 
 # Service Type allow you to specify what kind of service you want.
 # Possible values for ServiceType are:
@@ -24,11 +23,4 @@ sename: "testing-bootcamp-nandeesh"
 # and a Secret, respectively.
 # Both are added to the container environment in podSpec as envFrom source.
 
-env:
-  config:
-  #  HARNESS_FF_KEY: sdkkey
-  #  HARNESS_SE:seusername
-    HARNESS_BUILD: <+pipeline.sequenceId>
-  secrets:
-    key2: value2
 
