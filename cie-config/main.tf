@@ -48,15 +48,10 @@ module "platform" {
   }
 
   # Per-environment cluster overrides (alternative to setting cluster inline above)
+    create_infra_overrides = true
   cluster_overrides = {
     dev  = "dev-cluster"
-    prod = "prod-cluster"
-  }
-  default_cluster = "default"
-
-  create_infra_overrides           = true
-  infrastructure_identifier_suffix = "_infra"
-  allow_simultaneous_deployments   = false
+    prod = "prod-cluster"}
 
   # ---- Tags (tags merged over default_tags; same key wins) ----
   default_tags = { team = "platform" }
@@ -65,4 +60,3 @@ module "platform" {
   # ---- Cloud API retry tuning (optional) ----
   fixed_backoff = 2000   # ms; leave null to omit
   retry_count   = 3      # only used when fixed_backoff is set
-}
