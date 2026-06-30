@@ -49,6 +49,7 @@ module "platform" {
 
   # Per-environment cluster overrides (alternative to setting cluster inline above)
   create_infra_overrides = false
+
   # ---- Tags (tags merged over default_tags; same key wins) ----
   default_tags = { team = "platform" }
   tags         = { owner = "you", costcenter = "1234" }
@@ -56,3 +57,4 @@ module "platform" {
   # ---- Cloud API retry tuning (optional) ----
   fixed_backoff = 2000   # ms; leave null to omit
   retry_count   = 3      # only used when fixed_backoff is set
+}
