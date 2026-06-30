@@ -48,11 +48,7 @@ module "platform" {
   }
 
   # Per-environment cluster overrides (alternative to setting cluster inline above)
-    create_infra_overrides = true
-  cluster_overrides = {
-    dev  = "dev-cluster"
-    prod = "prod-cluster"}
-
+  create_infra_overrides = false
   # ---- Tags (tags merged over default_tags; same key wins) ----
   default_tags = { team = "platform" }
   tags         = { owner = "you", costcenter = "1234" }
