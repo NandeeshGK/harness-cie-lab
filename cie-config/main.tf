@@ -1,5 +1,5 @@
 module "platform" {
-  source  = "app.harness.io/Nqvj4rBDR2KoKrjGhauyVg/<MODULE_NAME>/<PROVIDER>"
+  source  = "app.harness.io/Nqvj4rBDR2KoKrjGhauyVg/cloudaws/aws"
   version = "2.0.1"
 
   # ---- Required ----
